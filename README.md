@@ -14,7 +14,7 @@ crypto-careers Scraper is an [Apify actor](https://apify.com/actors) for extract
 | country | string | Country where the positions will be searched for, if none then general indeed site is used. In JSON standard country two letter abbreveiation is used instead, for example 'cz' or 'uk' | none |
 | position | string | Any string pattern for position name or company | none |
 | location | string | Any string pattern for location city or area | none |
-| startUrls | array | List of [Request](https://sdk.apify.com/docs/api/request#docsNav) objects that will be deeply crawled. The URL can be top level like `https://cz.indeed.com/jobs?q=javascript+developer&l=prague`, any category/search URL or detail URL | `[{ "url": "https://cz.indeed.com/jobs?q=javascript+developer&l=prague" }]`|
+| startUrls | array | List of [Request](https://sdk.apify.com/docs/api/request#docsNav) objects that will be deeply crawled. The URL can be top level like `https://www.crypto-careers.com/jobs?q=javascript+developer&l=boston`, any category/search URL or detail URL | `[{ "url": "https://www.crypto-careers.com/jobs?q=javascript+developer&l=barcelona" }]`|
 | maxItems | number | Maximum number of actor pages that will be scraped | all found |
 | extendOutputFunction | string | Function that takes a JQuery handle ($) as argument and returns data that will be merged with the default output. More information in [Extend output function](#extend-output-function) | |
 | proxyConfiguration | object | Proxy settings of the run. Use Apify proxy (default settings), or use your own proxy. The actor cannot be run without proxy. | `{ "useApifyProxy": true }`|
