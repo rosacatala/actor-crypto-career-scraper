@@ -1,5 +1,5 @@
 {
-    "name": "indeed_com_scraper",
+    "name": "crypto_careers_com_scraper",
     "version": "0.0.1",
     "dependencies": {
         "apify": "1.1.2",
