@@ -1,6 +1,6 @@
-### Indeed Scraper
+### crypto-careers Scraper
 
-Indeed Scraper is an [Apify actor](https://apify.com/actors) for extracting data about work positions from [Indeed.com](https://www.indeed.com/). It allows you to extract information about all positions on this website. It is build on top of [Apify SDK](https://sdk.apify.com/) and you can run it both on [Apify platform](https://my.apify.com) and locally.
+crypto-careers Scraper is an [Apify actor](https://apify.com/actors) for extracting data about work positions from [crypto-careers.com](https://www.crypto-careers.com/). It allows you to extract information about all positions on this website. It is build on top of [Apify SDK](https://sdk.apify.com/) and you can run it both on [Apify platform](https://my.apify.com) and locally.
 
 - [Input](#input)
 - [Output](#output)
@@ -21,7 +21,7 @@ Indeed Scraper is an [Apify actor](https://apify.com/actors) for extracting data
 
 ### Output
 
-Output is stored in a dataset. Each item is an information about a movies/TV show. Example:
+Output is stored in a dataset. Each item is an information about a job description. Example:
 
 ```
 {
