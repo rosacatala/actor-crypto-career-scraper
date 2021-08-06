@@ -68,7 +68,7 @@ Apify.main(async () => {
         nl: 'https://www.crypto-careers.com',
         za: 'https://www.crypto-careers.com',
     };
-    const countryUrl = countryDict[country.toLowerCase()] || `https://${country || 'www'}.indeed.com`;
+    const countryUrl = countryDict[country.toLowerCase()] || `https://${country || 'www'}.crypto-careers.com`;
     // COUNTER OF ITEMS TO SAVE 
     let itemsCounter = 0;
     let currentPageNumber = 1;
@@ -173,7 +173,7 @@ Apify.main(async () => {
                         location: $(".jobsearch-JobInfoHeader-subtitle > div").eq(1).text(),
                         reviews: $(".jobsearch-JobInfoHeader-subtitle > div > div").eq(1).text().replace(/\D/g, ''),
                         url: request.url,
-                        id: getIdFromUrl($('meta[id="indeed-share-url"]').attr('content')),
+                        id: getIdFromUrl($('meta[id="crypto-careers-share-url"]').attr('content')),
                         description: $('div[id="jobDescriptionText"]').text(),
                     };
 
