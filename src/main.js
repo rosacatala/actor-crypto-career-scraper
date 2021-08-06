@@ -57,16 +57,16 @@ Apify.main(async () => {
     }
 
     const countryDict = {
-        us: 'https://www.indeed.com',
-        uk: 'https://www.indeed.co.uk',
-        gb: 'https://www.indeed.co.uk',
-        fr: 'https://www.indeed.fr',
-        es: 'https://www.indeed.es',
-        in: 'https://www.indeed.co.in',
-        br: 'https://www.indeed.com.br',
-        ca: 'https://www.indeed.ca',
-        nl: 'https://www.indeed.nl',
-        za: 'https://www.indeed.co.za',
+        us: 'https://www.crypto-careers.com',
+        uk: 'https://www.crypto-careers.com',
+        gb: 'https://www.crypto-careers.com',
+        fr: 'https://www.crypto-careers.com',
+        es: 'https://www.crypto-careers.com',
+        in: 'https://www.crypto-careers.com',
+        br: 'https://www.crypto-careers.com',
+        ca: 'https://www.crypto-careers.com',
+        nl: 'https://www.crypto-careers.com',
+        za: 'https://www.crypto-careers.com',
     };
     const countryUrl = countryDict[country.toLowerCase()] || `https://${country || 'www'}.indeed.com`;
     // COUNTER OF ITEMS TO SAVE 
