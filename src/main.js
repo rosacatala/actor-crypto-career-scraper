@@ -23,11 +23,7 @@ Apify.main(async () => {
             // pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[.*]/[.+]'], [[0-9]+[\-\-a-zA-Z]*][\d+\w|\-\*]
         });
     };
-     const sdkProxyConfiguration = await Apify.createProxyConfiguration(proxyConfiguration);
-    // You must use proxy on the platform
-    if (Apify.getEnv().isAtHome && !sdkProxyConfiguration) {
-        throw 'You must use Apify Proxy or custom proxies to run this scraper on the platform!';
-    }
+
     // Create a CheerioCrawler
     const crawler = new Apify.CheerioCrawler({
         requestQueue,
