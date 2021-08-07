@@ -19,8 +19,8 @@ Apify.main(async () => {
             $,
             requestQueue,
             baseUrl: request.loadedUrl,
-            pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[\d+\w|\-\*]'],
-            // pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[.*]/[.+]'], [[0-9]+[\-\-a-zA-Z]*]
+            pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[.*]'],
+            // pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[.*]/[.+]'], [[0-9]+[\-\-a-zA-Z]*][\d+\w|\-\*]
         });
     };
     // Create a CheerioCrawler
