@@ -1,36 +1,9 @@
 const Apify = require('apify');
+const urlParse = require('url-parse');
 
-Apify.main(async () => {
-    // Create a RequestQueue
-    const requestQueue = await Apify.openRequestQueue();
-    // Define the starting URL
-    await requestQueue.addRequest({ url: 'https://www.crypto-careers.com/jobs/' });
-    // Function called for each URL
-    const handlePageFunction = async ({ request, $ }) => {
-        console.log(request.url);
-        // Add all links from page to RequestQueue
-        await Apify.utils.enqueueLinks({
-            $,
-            requestQueue,
-            baseUrl: request.loadedUrl, // <-------------- important to set the base url here
-        });
-    };
-    // Create a CheerioCrawler
-    const crawler = new Apify.CheerioCrawler({
-        requestQueue,
-        handlePageFunction,
-        maxRequestsPerCrawl: 10, // Limitation for only 10 requests (do not use if you want to crawl all links)
-    });
-    // Run the crawler
-    await crawler.run();
-});
-
-// const Apify = require('apify');
-//const urlParse = require('url-parse');
-
-//const {
-//    log
-//} = Apify.utils;
+const {
+    log
+} = Apify.utils;
 
 function makeUrlFull(href, urlParsed) {
     if (href.substr(0, 1) === '/') return urlParsed.origin + href;
@@ -110,7 +83,7 @@ Apify.main(async () => {
             if (!req.userData.label) req.userData.label = 'START';
             req.userData.itemsCounter = itemsCounter;
             req.userData.currentPageNumber = currentPageNumber;
-            if (req.url.includes("viewjob")) req.userData.label = 'DETAIL'
+            if (req.url.includes("jobs")) req.userData.label = 'DETAIL'
             await requestQueue.addRequest(req);
             log.info(`This url will be scraped: ${req.url}`);
         }
