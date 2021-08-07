@@ -13,8 +13,9 @@ Apify.main(async () => {
     await requestQueue.addRequest({ url: 'https://www.crypto-careers.com/jobs' });
     // Function called for each URL
     const handlePageFunction = async ({ request, $ }) => {
-        console.log(request.url);
+        // console.log(request.url);
         const { body } = await Apify.utils.requestAsBrowser();
+        console.log(body);
         // Add some links from page to RequestQueue
         await Apify.utils.enqueueLinks({
             $,
