@@ -6,8 +6,6 @@ const Apify = require('apify'); // use named export to get the class
 //     console.log(body);
 // });
 
-const Apify = require('apify');
-
 Apify.main(async () => {
     // Create a RequestQueue
     const requestQueue = await Apify.openRequestQueue();
