@@ -14,6 +14,7 @@ Apify.main(async () => {
     // Function called for each URL
     const handlePageFunction = async ({ request, $ }) => {
         console.log(request.url);
+        const { body } = await Apify.utils.requestAsBrowser();
         // Add some links from page to RequestQueue
         await Apify.utils.enqueueLinks({
             $,
