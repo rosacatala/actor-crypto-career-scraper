@@ -19,7 +19,7 @@ Apify.main(async () => {
             $,
             requestQueue,
             baseUrl: request.loadedUrl,
-            pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[^[\d]+(\w|-)*$]'],
+            pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[^\d+\(\w|-)*$]'],
             // pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[.*]/[.+]'],
         });
     };
