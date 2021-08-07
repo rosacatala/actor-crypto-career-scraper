@@ -14,7 +14,7 @@ Apify.main(async () => {
     // Function called for each URL
     const handlePageFunction = async ({ request, $ }) => {
         // console.log(request.url);
-        const { body } = await Apify.utils.requestAsBrowser({ url: 'https://www.crypto-careers.com/jobs' });
+        const { body } = await Apify.utils.requestAsBrowser({ url: 'https://www.crypto-careers.com/jobs/75928037-marketing-manager-north-america-at-kava-labs-inc' });
         console.log(body);
         // Add some links from page to RequestQueue
         await Apify.utils.enqueueLinks({
