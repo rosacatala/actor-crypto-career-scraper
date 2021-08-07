@@ -57,15 +57,15 @@ Apify.main(async () => {
 
     const countryDict = {
         us: 'https://www.crypto-careers.com',
-        uk: 'https://www.crypto-careers.com/jobs',
-        gb: 'https://www.crypto-careers.com/jobs',
-        fr: 'https://www.crypto-careers.com/jobs',
-        es: 'https://www.crypto-careers.com/jobs',
-        in: 'https://www.crypto-careers.com/jobs',
-        br: 'https://www.crypto-careers.com/jobs',
-        ca: 'https://www.crypto-careers.com/jobs',
-        nl: 'https://www.crypto-careers.com/jobs',
-        za: 'https://www.crypto-careers.com/jobs',
+        uk: 'https://www.crypto-careers.com',
+        gb: 'https://www.crypto-careers.com',
+        fr: 'https://www.crypto-careers.com',
+        es: 'https://www.crypto-careers.com',
+        in: 'https://www.crypto-careers.com',
+        br: 'https://www.crypto-careers.com',
+        ca: 'https://www.crypto-careers.com',
+        nl: 'https://www.crypto-careers.com',
+        za: 'https://www.crypto-careers.com',
     };
     const countryUrl = countryDict[country.toLowerCase()] || `https://${country || 'www'}.crypto-careers.com`;
     // COUNTER OF ITEMS TO SAVE 
