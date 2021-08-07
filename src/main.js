@@ -56,7 +56,7 @@ Apify.main(async () => {
     }
 
     const countryDict = {
-        us: 'https://www.crypto-careers.com/jobs',
+        us: 'https://www.crypto-careers.com',
         uk: 'https://www.crypto-careers.com/jobs',
         gb: 'https://www.crypto-careers.com/jobs',
         fr: 'https://www.crypto-careers.com/jobs',
