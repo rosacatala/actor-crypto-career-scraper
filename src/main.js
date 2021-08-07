@@ -1,14 +1,13 @@
-const Apify = require('apify');
+const Apify = require('apify'); // use named export to get the class
+
 const urlParse = require('url-parse');
 
-const {
-    log
-} = Apify.utils;
+const {log} = Apify.utils;
 
-//function makeUrlFull(href, urlParsed) {
-//    if (href.substr(0, 1) === '/') return urlParsed.origin + href;
-//    return href;
-//}
+function makeUrlFull(href, urlParsed) {
+    if (href.substr(0, 1) === '/') return urlParsed.origin + href;
+    return href;
+}
 
 function getIdFromUrl(url) {
     return (url.match(new RegExp('(?<=jk=).*?$')) ? url.match(new RegExp('(?<=jk=).*?$'))[0] : '');
