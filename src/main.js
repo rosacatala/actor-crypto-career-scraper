@@ -20,7 +20,7 @@ Apify.main(async () => {
         await Apify.utils.enqueueLinks({
             $,
             requestQueue,
-            baseUrl: request.loadedUrl, 'https://www.crypto-careers.com/jobs/75928037-marketing-manager-north-america-at-kava-labs-inc',
+            baseUrl: request.loadedUrl,
             pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[\d+\w|\-\*]'],
             // pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[.*]/[.+]'], [[0-9]+[\-\-a-zA-Z]*][\d+\w|\-\*]
         });
@@ -30,7 +30,7 @@ Apify.main(async () => {
     const crawler = new Apify.CheerioCrawler({
         requestQueue,
         handlePageFunction,
-        maxRequestsPerCrawl: 10, // Limitation for only 10 requests (do not use if you want to crawl all links)
+        maxRequestsPerCrawl: 100, // Limitation for only 10 requests (do not use if you want to crawl all links)
     });
     // Run the crawler
     await crawler.run();
