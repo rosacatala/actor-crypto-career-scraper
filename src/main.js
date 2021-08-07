@@ -10,7 +10,7 @@ Apify.main(async () => {
     // Create a RequestQueue
     const requestQueue = await Apify.openRequestQueue();
     // Define the starting URL
-    await requestQueue.addRequest({ url: 'http[s?]://www.crypto-careers.com/jobs' });
+    await requestQueue.addRequest({ url: 'https://www.crypto-careers.com/jobs' });
     // Function called for each URL
     const handlePageFunction = async ({ request, $ }) => {
         console.log(request.url);
@@ -19,7 +19,7 @@ Apify.main(async () => {
             $,
             requestQueue,
             baseUrl: request.loadedUrl,
-            pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[.+]'],
+            pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[.*]'],
             // pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[.+]/[.+]'],
         });
     };
