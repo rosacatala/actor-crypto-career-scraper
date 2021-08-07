@@ -6,19 +6,22 @@ const Apify = require('apify'); // use named export to get the class
 //     console.log(body);
 // });
 
+const Apify = require('apify');
+
 Apify.main(async () => {
     // Create a RequestQueue
     const requestQueue = await Apify.openRequestQueue();
     // Define the starting URL
-    await requestQueue.addRequest({ url: 'https://www.crypto-careers.com/jobs/' });
+    await requestQueue.addRequest({ url: 'https://www.crypto-careers.com/jobs' });
     // Function called for each URL
     const handlePageFunction = async ({ request, $ }) => {
         console.log(request.url);
-        // Add all links from page to RequestQueue
+        // Add some links from page to RequestQueue
         await Apify.utils.enqueueLinks({
             $,
             requestQueue,
             baseUrl: request.loadedUrl,
+            pseudoUrls: ['http[s?]://www.crypto-careers.com/[.+]/[.+]'],
         });
     };
     // Create a CheerioCrawler
