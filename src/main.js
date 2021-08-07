@@ -14,13 +14,13 @@ Apify.main(async () => {
     // Function called for each URL
     const handlePageFunction = async ({ request, $ }) => {
         // console.log(request.url);
-        const { body } = await Apify.utils.requestAsBrowser({ url: 'https://www.crypto-careers.com/jobs/75928037-marketing-manager-north-america-at-kava-labs-inc' });
+        const { body } = await Apify.utils.requestAsBrowser({ url: 'https://www.crypto-careers.com/jobs/' });
         console.log(body);
         // Add some links from page to RequestQueue
         await Apify.utils.enqueueLinks({
             $,
             requestQueue,
-            baseUrl: request.loadedUrl,
+            baseUrl: request.loadedUrl, 'https://www.crypto-careers.com/jobs/75928037-marketing-manager-north-america-at-kava-labs-inc',
             pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[\d+\w|\-\*]'],
             // pseudoUrls: ['http[s?]://www.crypto-careers.com/jobs/[.*]/[.+]'], [[0-9]+[\-\-a-zA-Z]*][\d+\w|\-\*]
         });
