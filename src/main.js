@@ -173,7 +173,7 @@ Apify.main(async () => {
                         location: $(".jobsearch-JobInfoHeader-subtitle > div").eq(1).text(),
                         reviews: $(".jobsearch-JobInfoHeader-subtitle > div > div").eq(1).text().replace(/\D/g, ''),
                         url: request.url,
-                        id: getIdFromUrl($('meta[id="indeed-share-url"]').attr('content')),
+                        id: getIdFromUrl($('meta[id="crypto-careers-share-url"]').attr('content')),
                         description: $('div[id="jobDescriptionText"]').text(),
                     };
 
